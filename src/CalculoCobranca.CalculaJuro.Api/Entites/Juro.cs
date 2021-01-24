@@ -9,7 +9,7 @@ namespace CalculoCobranca.CalculaJuro.Api.Entites
         public int Meses { get; private set; }
         public double TaxaDeJuro { get; private set; }
 
-        public Juro(decimal valorInicial, int meses, decimal taxaDeJuro)
+        public Juro(double valorInicial, int meses, double taxaDeJuro)
         {
             ValorInicial = valorInicial;
             Meses = meses;
@@ -17,14 +17,20 @@ namespace CalculoCobranca.CalculaJuro.Api.Entites
         }
 
         public override bool IsValid()
-        {           
+        {
             return Validate(this, new JuroValidation());
         }
 
-        public decimal CalcularJuroComposto()
+        /// <summary>
+        /// Realiza o cálculo de juro composto.
+        /// </summary>
+        /// <returns>Retorna o valor do cálculo.</returns>
+        public double CalcularJuroComposto()
         {
-            decimal valorFinal = ValorInicial * Math.Pow(1 + TaxaDeJuro, Meses);
-            valorFinal = Math.Truncate(100 * valorFinal) / 100;
+            double valorCalculado = ValorInicial * Math.Pow(1 + TaxaDeJuro, Meses);
+            double valorFinal = Math.Truncate(100 * valorCalculado) / 100;
+
+            return valorFinal;
         }
     }
 }
