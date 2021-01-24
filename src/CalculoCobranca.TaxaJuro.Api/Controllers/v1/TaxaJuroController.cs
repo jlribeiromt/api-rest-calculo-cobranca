@@ -18,7 +18,7 @@ namespace CalculoCobranca.TaxaJuro.Api.Controllers.v1
 
         [Route("taxaJuros")]        
         [HttpGet]
-        public ActionResult<decimal> ObterTaxaJuro()
+        public ActionResult<double> ObterTaxaJuro()
         {
             return _taxaJuroService.ObterTaxaJuro();
         }       

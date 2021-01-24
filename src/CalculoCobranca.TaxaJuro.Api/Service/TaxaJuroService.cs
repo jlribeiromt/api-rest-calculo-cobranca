@@ -8,9 +8,9 @@ namespace CalculoCobranca.TaxaJuro.Api.Service
         /// Obter o valor da taxa de juros.
         /// </summary>
         /// <returns>Retorna o valor da taxa de juros.</returns>
-        public decimal ObterTaxaJuro()
+        public double ObterTaxaJuro()
         {
-            return 0.01M;
+            return 0.01D;
         }
     }
 }
