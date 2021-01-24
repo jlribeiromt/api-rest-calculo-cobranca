@@ -36,10 +36,8 @@ namespace CalculoCobranca.CalculaJuro.Api.Core
         {
             OperationSuccess = false;
 
-            if (data is ValidationResult)
+            if (data is ValidationResult validation)
             {
-                var validation = (ValidationResult)data;
-
                 if (!validation.IsValid)
                 {
                     ClearErrors();
@@ -54,7 +52,7 @@ namespace CalculoCobranca.CalculaJuro.Api.Core
                         Data = _errors.ToArray();
                     }
                 }
-            }           
+            }
         }
 
         /// <summary>
