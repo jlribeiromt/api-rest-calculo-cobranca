@@ -5,7 +5,7 @@
 > (pelo endpoint "/showmethecode"). 
 
 ## Tecnologias usadas no projeto:
-* ASP.NET Core 5.0
+* ASP.NET Core 3.1
 * .NET Core Native DI
 * FluentValidator
 * Versionamento de APIs
@@ -18,13 +18,26 @@
 * Validação de entidades
 * TDD 
 
-## Como instalar:
+------------
 
-* Você precisará do mais recente Visual Studio 2019 e do mais recente .NET Core SDK.
+## Como instalar
+**Antes de qualquer coisa, prepare o ambiente de desenvolvimento** 
 * Instale o [Git](https://git-scm.com/downloads "git")
+* Instale o Docker
+* Certifique-se também que as portas `64979`, `64978`estão liberadas.
+ 
+------------
 
 ## Executando o Projeto
 * Faça um clone do projeto
 * Acesse o mesmo
+* Rode o comando docker.
+ ```sh
+git clone https://github.com/jlribeiromt/api-rest-calculo-cobranca.git
+cd api-rest-calculo-cobranca
+docker-compose up --build
+ ```
+ 
+**Após a finalização do build, o link para acesso do swagger  da [API Taxa Juro](http://localhost:64979/swagger/"swagger") e para acesso da [API Calcula Juro](http://localhost:64978/swagger/ "swagger")**.
 
 
