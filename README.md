@@ -5,7 +5,7 @@
 > (pelo endpoint "/showmethecode"). 
 
 ## Tecnologias usadas no projeto:
-* ASP.NET Core 5.0
+* ASP.NET Core 3.1
 * .NET Core Native DI
 * FluentValidator
 * Versionamento de APIs
@@ -18,13 +18,26 @@
 * Validação de entidades
 * TDD 
 
-## Como instalar:
+------------
 
-* Você precisará do mais recente Visual Studio 2019 e do mais recente .NET Core SDK.
+## Como instalar
+**Antes de qualquer coisa, prepare o ambiente de desenvolvimento** 
 * Instale o [Git](https://git-scm.com/downloads "git")
+* Instale o [Docker](https://app.dbdesigner.net/signup "docker")
+* Certifique-se também que as portas `5555`, `64978` e `1433` estão liberadas.
+ 
+------------
 
 ## Executando o Projeto
 * Faça um clone do projeto
 * Acesse o mesmo
+* Rode o comando docker.
+ ```sh
+git clone https://github.com/pablomorigi/ewave-livraria-senior.git
+cd ewave-livraria-senior
+docker-compose up --build
+ ```
+
+**Após a finalização do build, o link poderá ser acessado para front-end clicando [aqui](http://localhost:5555/ "front") e para o swagger clicando [aqui](http://localhost:64978/swagger/ "swagger")**
 
 
