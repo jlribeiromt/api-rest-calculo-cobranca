@@ -23,8 +23,8 @@
 ## Como instalar
 **Antes de qualquer coisa, prepare o ambiente de desenvolvimento** 
 * Instale o [Git](https://git-scm.com/downloads "git")
-* Instale o [Docker](https://app.dbdesigner.net/signup "docker")
-* Certifique-se também que as portas `5555`, `64978` e `1433` estão liberadas.
+* Instale o Docker
+* Certifique-se também que as portas `64979`, `64978`estão liberadas.
  
 ------------
 
@@ -33,11 +33,11 @@
 * Acesse o mesmo
 * Rode o comando docker.
  ```sh
-git clone https://github.com/pablomorigi/ewave-livraria-senior.git
-cd ewave-livraria-senior
+git clone https://github.com/jlribeiromt/api-rest-calculo-cobranca.git
+cd api-rest-calculo-cobranca
 docker-compose up --build
  ```
-
-**Após a finalização do build, o link poderá ser acessado para front-end clicando [aqui](http://localhost:5555/ "front") e para o swagger clicando [aqui](http://localhost:64978/swagger/ "swagger")**
+ 
+**Após a finalização do build, o link para acesso do swagger  da [API Taxa Juro](http://localhost:64979/swagger/"swagger") e para acesso da [API Calcula Juro](http://localhost:64978/swagger/ "swagger")**.
 
 
