@@ -10,15 +10,14 @@ namespace CalculoCobranca.CalculaJuro.Api.Test.Service
         
 
         [Theory]
-        [InlineData(100, 5)]
+        [InlineData(0, 5)]
         [InlineData(0, 2)]
         public void Quando_informar_ValorInicial_igual_a_zero_nao_deve_calcular(double valorInicial, int meses)
         {
             // arrange                        
-            Mock<ICalculaJuroService> _service = new Mock<ICalculaJuroService>();
+            var _service = new Mock<ICalculaJuroService>();
             ResultDTO resulDTO = new ResultDTO();
-            // act
-            var result = _service.Object.ObterValorJuroComposto(valorInicial, meses);
+            // act           
             _service.Setup(c => c.ObterValorJuroComposto(It.IsAny<double>(), It.IsAny<int>())).Returns(resulDTO);
 
             var dto = _service.Object.ObterValorJuroComposto(valorInicial, meses);

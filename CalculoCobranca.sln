@@ -11,9 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Calculo de Juro", "Calculo 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Taxa de Juro", "Taxa de Juro", "{54526BAB-0E2A-4F31-87D2-585B355684A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculoCobranca.CalculaJuro.Api.Test", "test\CalculoCobranca.CalculaJuro.Api.Test\CalculoCobranca.CalculaJuro.Api.Test.csproj", "{A150C4C6-2CFD-42FF-BA72-EF69DEFC170D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculoCobranca.CalculaJuro.Api.IntegrationTest", "CalculoCobranca.CalculaJuro.Api.IntegrationTest\CalculoCobranca.CalculaJuro.Api.IntegrationTest.csproj", "{CE3C4CEC-DF4B-40B3-B535-0C20088E6AB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculoCobranca.CalculaJuro.Api.Test", "test\CalculoCobranca.CalculaJuro.Api.Test\CalculoCobranca.CalculaJuro.Api.Test.csproj", "{A150C4C6-2CFD-42FF-BA72-EF69DEFC170D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,10 +31,6 @@ Global
 		{A150C4C6-2CFD-42FF-BA72-EF69DEFC170D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A150C4C6-2CFD-42FF-BA72-EF69DEFC170D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A150C4C6-2CFD-42FF-BA72-EF69DEFC170D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CE3C4CEC-DF4B-40B3-B535-0C20088E6AB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CE3C4CEC-DF4B-40B3-B535-0C20088E6AB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CE3C4CEC-DF4B-40B3-B535-0C20088E6AB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CE3C4CEC-DF4B-40B3-B535-0C20088E6AB4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,7 +39,6 @@ Global
 		{C5D431B2-35E3-43B5-9DDA-5318A8EB0674} = {54526BAB-0E2A-4F31-87D2-585B355684A8}
 		{CFA171DB-BE83-4FB0-B2E8-9DB7B778113D} = {4F71D462-7293-47EE-B190-F0E063663886}
 		{A150C4C6-2CFD-42FF-BA72-EF69DEFC170D} = {4F71D462-7293-47EE-B190-F0E063663886}
-		{CE3C4CEC-DF4B-40B3-B535-0C20088E6AB4} = {4F71D462-7293-47EE-B190-F0E063663886}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {79115460-E584-4412-8680-6B82C61931E3}
