@@ -1,4 +1,5 @@
-﻿using CalculoCobranca.CalculaJuro.Api.Interface;
+﻿using CalculoCobranca.CalculaJuro.Api.Filters;
+using CalculoCobranca.CalculaJuro.Api.Interface;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CalculoCobranca.CalculaJuro.Api.Controllers.v1
@@ -7,6 +8,7 @@ namespace CalculoCobranca.CalculaJuro.Api.Controllers.v1
     [ApiVersion("1")]
     [Route("api/v{version:apiVersion}/taxa")]
     [Produces("application/json")]
+    [ExceptionActionFilter]
     public class JuroCompostoController : ControllerBase
     {
         private readonly ICalculaJuroService _calculaJuroService;

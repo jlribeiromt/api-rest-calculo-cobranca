@@ -1,4 +1,5 @@
 ﻿using CalculoCobranca.CalculaJuro.Api.Entites;
+using CalculoCobranca.CalculaJuro.Api.Filters;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CalculoCobranca.CalculaJuro.Api.Controllers.v1
@@ -8,6 +9,7 @@ namespace CalculoCobranca.CalculaJuro.Api.Controllers.v1
     [ApiVersion("1")]
     [Route("api/v{version:apiVersion}/source")]
     [Produces("application/json")]
+    [ExceptionActionFilter]
     public class SourceCodeController : ControllerBase
     {
 

@@ -1,12 +1,20 @@
-# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP .NET Core service.
-
 version: '3.6'
 
 services:
-  calculocobrancataxajuroapi:
-    image: calculocobrancataxajuroapi
+  taxajuroapi-v1:
+    container_name: taxajuroapi-v1
+    image: taxajuroapi-v1    
     build:
-      context: .
-      dockerfile: ./Dockerfile
+        context: .
+        dockerfile: ./src/CalculoCobranca.TaxaJuro.Api/Dockerfile
     ports:
       - "64978:80"
+    
+  calculajuroapi-v1:
+      container_name: calculajuroapi-v1
+      image: calculajuroapi-v1    
+      build:
+          context: .
+          dockerfile: ./src/CalculoCobranca.CalculaJuro.Api/Dockerfile                
+      ports:
+        - "64979:80"

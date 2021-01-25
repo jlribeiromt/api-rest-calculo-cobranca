@@ -54,18 +54,15 @@ namespace CalculoCobranca.TaxaJuro.Api
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-
-                //Configurações Swagger
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API Taxa de Juro v1"));
             }
 
-            app.UseHttpsRedirection();
+            //Configurações Swagger
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API Taxa de Juro v1"));
 
-            app.UseRouting();
-
-            app.UseAuthorization();
-
+            app.UseRouting()
+                .UseCors(c => { c.AllowAnyOrigin(); c.AllowAnyHeader(); c.AllowAnyMethod(); });
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

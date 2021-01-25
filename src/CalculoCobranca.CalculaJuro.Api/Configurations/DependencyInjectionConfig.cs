@@ -1,6 +1,7 @@
 ﻿using CalculoCobranca.CalculaJuro.Api.Interface;
 using CalculoCobranca.CalculaJuro.Api.Service;
 using Microsoft.Extensions.DependencyInjection;
+using System.Net.Http;
 
 namespace CalculoCobranca.CalculaJuro.Api.Configurations
 {
@@ -12,6 +13,7 @@ namespace CalculoCobranca.CalculaJuro.Api.Configurations
         public static void AddDependencyInjectionConfiguration(this IServiceCollection services)
         {
             services.AddScoped<ICalculaJuroService, CalculaJuroService>();
+            services.AddScoped<ITaxaJuroService, TaxaJuroService>();
         }
     }
 }

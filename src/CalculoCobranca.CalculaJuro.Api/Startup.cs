@@ -46,7 +46,7 @@ namespace CalculoCobranca.CalculaJuro.Api
                 p.SubstituteApiVersionInUrl = true;
             });
 
-
+            services.AddHttpClient();
             services.AddDependencyInjectionConfiguration();
         }
 
@@ -56,15 +56,14 @@ namespace CalculoCobranca.CalculaJuro.Api
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API Calculo de Juro Composto v1"));
             }
 
-            app.UseHttpsRedirection();
+            //Configurações Swagger
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API Calculo de Juro Composto v1"));
 
-            app.UseRouting();
-
-            app.UseAuthorization();
+            app.UseRouting()
+                .UseCors(c => { c.AllowAnyOrigin(); c.AllowAnyHeader(); c.AllowAnyMethod(); });
 
             app.UseEndpoints(endpoints =>
             {
